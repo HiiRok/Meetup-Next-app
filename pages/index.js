@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React, { Fragment } from 'react';
 import { MongoClient} from 'mongodb';
 
-import MeetupList from '@/components/meetups/MeetupList';
 
 const HomePage = (props) => {
   return (
@@ -20,7 +19,7 @@ const HomePage = (props) => {
 }
 
 export async function getStaticProps() {
-    const client = await MongoClient.connect(URL);
+    const client = await MongoClient.connect('mongodb://127.0.0.1:27017/meetups');
 
     const db = client.db();
     const meetupsCollection = db.collection('meetups');
