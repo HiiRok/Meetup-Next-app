@@ -1,34 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Meetup App with Next.js and MongoDB
 
-## Getting Started
+This is a Meetup app built with Next.js and MongoDB. It leverages Next.js's server-side rendering capabilities using `getStaticProps` to fetch data from MongoDB and display it on the client-side. MongoDB is used for data storage, allowing for a scalable and flexible backend.
 
-First, run the development server:
+![App Screenshot](screenshots/app_screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have Node.js and MongoDB installed on your machine.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Run the following command to install the dependencies:
 
-## Learn More
+    ```bash
+    npm install
 
-To learn more about Next.js, take a look at the following resources:
+##Usage
+To run the app, use the following command:
+    ```bash
+    npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app will be accessible at http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Key Points
+1.Server-Side Rendering: Meetup data is fetched using getStaticProps from the server-side and passed as props to the components for rendering. This ensures a faster initial load time and improves SEO.
 
-## Deploy on Vercel
+2.MongoDB Integration: MongoDB is used as the database to store meetup information. The mongoDb.js file provides utility functions for connecting to MongoDB and interacting with the database.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.Dynamic Routes: Dynamic routing is used to create individual meetup pages based on the meetupId.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4.Component-Based Architecture: The components folder contains reusable UI components for building the app's user interface.
+
+5.Assets Folder(inside of src): The public folder contains static assets like images.
+
+## Screenshots
+Include some screenshots of your app here to showcase its features.
+
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+The Meetup app was inspired by various existing event management applications.
+
+Thanks to the Next.js and MongoDB communities for their valuable tools and packages
