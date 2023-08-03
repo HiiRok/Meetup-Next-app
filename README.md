@@ -17,8 +17,9 @@ Make sure you have Node.js and MongoDB installed on your machine.
     ```bash
     npm install
 
-##Usage
+## Usage
 To run the app, use the following command:
+
     ```bash
     npm run dev
 
