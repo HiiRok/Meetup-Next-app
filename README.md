@@ -20,7 +20,6 @@ Make sure you have Node.js and MongoDB installed on your machine.
 ## Usage
 To run the app, use the following command:
 
-    ```bash
     npm run dev
 
 The app will be accessible at http://localhost:3000.
